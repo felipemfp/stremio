@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    ports:
+      - "10470:8080"
+
+  server:
+    image: "stremio/server:latest"
+    ports:
+      - "11470:11470"
+      - "12470:12470"
+    environment:
+      - NO_CORS=1
