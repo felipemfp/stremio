@@ -3,7 +3,7 @@ FROM node:alpine
 WORKDIR /app
 
 RUN apk add git && \
-    git clone https://github.com/stremio/stremio-web --depth 1 /app && \
+    git clone https://github.com/felipemfp/stremio-web --depth 1 /app && \
     cd /app && \
     npm install && \
     npm run build && \
