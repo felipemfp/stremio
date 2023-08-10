@@ -4,6 +4,7 @@ services:
     build: .
     ports:
       - "10470:8080"
+    restart: always
 
   server:
     image: "stremio/server:latest"
@@ -12,3 +13,4 @@ services:
       - "12470:12470"
     environment:
       - NO_CORS=1
+    restart: always
