@@ -6,7 +6,13 @@
   </head>
   <body>
     <script>
-      window.location.replace(`http://192.168.1.9:11470/`);
+      const localIp = "192.168.1.9";
+
+      const params = new URLSearchParams({
+        streamingServerUrl: `http://${localIp}:11470`,
+      });
+
+      window.location.replace(`http://${localIp}:10470?${params}`);
     </script>
   </body>
 </html>
